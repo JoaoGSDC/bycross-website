@@ -35,7 +35,7 @@ export const ImgContainer = styled.div`
 
   @media (max-width: 800px) {
     div {
-      width: calc(100% - 17px);
+      width: calc(100% - 20px);
       font-size: 25px;
       margin-top: 20px;
     }
