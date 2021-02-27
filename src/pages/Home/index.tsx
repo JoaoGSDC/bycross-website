@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 
 import logoImg from "../../assets/img/logo_img.svg";
@@ -14,6 +14,9 @@ import {
   MainText,
   DescriptionText,
   ContactContainer,
+  FooterContainer,
+  FooterTextContainer,
+  FieldsContainer,
 } from "./styles";
 
 const Home = () => {
@@ -46,7 +49,7 @@ const Home = () => {
             </div>
 
             <DescriptionText>
-              <div>
+              <div style={{ padding: 25 }}>
                 <span>
                   Nosso principal objetivo é de colaborar tanto com a falta de
                   demanda de profissionais desenvolvedores para as empresas,
@@ -57,14 +60,18 @@ const Home = () => {
             </DescriptionText>
           </OptionSolutionContainer>
 
-          <OptionSolutionContainer style={{ flexDirection: "row-reverse" }}>
+          <OptionSolutionContainer
+            style={{
+              flexDirection: window.innerWidth > 800 ? "row-reverse" : "column",
+            }}
+          >
             <div>
               <img src={designImg} alt="dev" />
               <MainText style={{ left: "75%" }}>{"<DESIGN />"}</MainText>
             </div>
 
             <DescriptionText>
-              <div>
+              <div style={{ padding: 25 }}>
                 <span>
                   Nosso principal objetivo é de colaborar tanto com a falta de
                   demanda de profissionais desenvolvedores para as empresas,
@@ -80,10 +87,10 @@ const Home = () => {
 
         <ContactContainer>
           <form>
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            <FieldsContainer>
               <input type="text" placeholder="Nome" />
               <input type="text" placeholder="E-mail" />
-            </div>
+            </FieldsContainer>
 
             <textarea placeholder="Digite sua mensagem aqui" />
 
@@ -92,26 +99,12 @@ const Home = () => {
         </ContactContainer>
 
         <footer>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
+          <FooterContainer>
             <img src={logoImg} alt="" />
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                textAlign: "center",
-                color: "#606060",
-              }}
-            >
+            <FooterTextContainer>
               <span>© ByCross Software - Limeira(SP)</span>
-            </div>
-          </div>
+            </FooterTextContainer>
+          </FooterContainer>
         </footer>
       </div>
     </>

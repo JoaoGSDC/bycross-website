@@ -32,6 +32,14 @@ export const ImgContainer = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  @media (max-width: 800px) {
+    div {
+      width: 100%;
+      font-size: 25px;
+      margin-top: 20px;
+    }
+  }
 `;
 
 export const TextByCross = styled.span`
@@ -52,6 +60,14 @@ export const OptionSolutionContainer = styled.div`
       opacity: 0.2;
       filter: grayscale(1);
     }
+
+    @media (max-width: 800px) {
+      width: 100% !important;
+    }
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
   }
 `;
 
@@ -65,6 +81,12 @@ export const MainText = styled.span`
   left: 25%;
   transform: translate(-50%, -50%);
   color: #3efd51;
+
+  @media (max-width: 800px) {
+    font-size: 30px !important;
+    top: 25% !important;
+    left: 50% !important;
+  }
 `;
 
 export const DescriptionText = styled.div`
@@ -80,4 +102,32 @@ export const DescriptionText = styled.div`
 export const ContactContainer = styled.div`
   background-color: #212121;
   padding: 15px 60px;
+
+  @media (max-width: 800px) {
+    padding: 15px 15px !important;
+  }
+`;
+
+export const FooterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const FooterTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #606060;
+`;
+
+export const FieldsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 800px) {
+    width: calc(100% - 40px);
+    flex-direction: column !important;
+  }
 `;

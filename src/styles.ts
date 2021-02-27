@@ -27,6 +27,11 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     font-size: 16px;
     margin: 0px 10px;
+    border-radius: 5px;
+
+    @media (max-width: 800px) {
+      margin-bottom: 5px;
+    }
   }
 
   textarea {
@@ -40,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 10px 10px;
     font-family: 'Roboto', sans-serif;
     resize: none;
+    border-radius: 5px;
   }
 
   button {
@@ -52,6 +58,7 @@ export const GlobalStyle = createGlobalStyle`
     margin-left: 10px;
     margin-top: 30px;
     margin-bottom: 30px;
+    border-radius: 5px;
   }
 
   footer {
@@ -63,5 +70,12 @@ export const GlobalStyle = createGlobalStyle`
       width: 200px;
       margin-bottom: 30px;
     }
+  }
+  
+  .MuiDrawer-paperAnchorLeft {
+    width: 50%;
+    padding: 15px;
+    color: #ffffff;
+    background-color: #191919;
   }
 `;
