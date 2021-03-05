@@ -34,10 +34,20 @@ export const ImgContainer = styled.div`
   }
 
   @media (max-width: 800px) {
+    height: 700px;
+
     div {
       width: calc(100% - 30px);
       font-size: 25px;
       margin-top: 20px;
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+      z-index: -1;
+      left: 0;
+      position: fixed !important;
     }
   }
 `;
@@ -54,10 +64,12 @@ export const OptionSolutionContainer = styled.div`
 
   div {
     width: 50%;
+    background-color: #212121;
 
     img {
       width: 100%;
       opacity: 0.2;
+      margin-bottom: -3px;
       filter: grayscale(1);
     }
 
@@ -90,13 +102,17 @@ export const MainText = styled.span`
 `;
 
 export const DescriptionText = styled.div`
-  background-color: #f7f7f7;
+  background-color: #f7f7f7 !important;
   color: #818181;
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 40px;
   font-size: 18px;
+
+  div {
+    background-color: #f7f7f7 !important;
+  }
 `;
 
 export const ContactContainer = styled.div`

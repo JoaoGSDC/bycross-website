@@ -33,7 +33,7 @@ const Home = () => {
           </div>
         </ImgContainer>
 
-        <TitleTextContainer>Serviços</TitleTextContainer>
+        <TitleTextContainer id="service">Serviços</TitleTextContainer>
 
         <div
           style={{
@@ -83,7 +83,7 @@ const Home = () => {
           </OptionSolutionContainer>
         </div>
 
-        <TitleTextContainer>Contato</TitleTextContainer>
+        <TitleTextContainer id="contact">Contato</TitleTextContainer>
 
         <ContactContainer>
           <form>

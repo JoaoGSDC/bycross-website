@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavContainer = styled.nav`
   height: 60px;
-  background-color: rgba(25, 25, 25, 0.85);
+  background-color: rgba(25, 25, 25, 1);
   padding: 10px 30px;
   display: flex;
   flex-direction: row;
