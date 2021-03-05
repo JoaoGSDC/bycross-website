@@ -1,4 +1,6 @@
 import React from "react";
+import emailjs from "emailjs-com";
+
 import Navbar from "../../components/Navbar";
 
 import logoImg from "../../assets/img/logo_img.svg";
@@ -20,6 +22,26 @@ import {
 } from "./styles";
 
 const Home = () => {
+  function sendEmail(e: any) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ky6o0l7",
+        "template_namn23r",
+        e.target,
+        "user_g1HsrgYq2zH8TrHsPWEEY"
+      )
+      .then(
+        (result) => {
+          window.location.reload();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
+
   return (
     <>
       <div>
@@ -86,15 +108,17 @@ const Home = () => {
         <TitleTextContainer id="contact">Contato</TitleTextContainer>
 
         <ContactContainer>
-          <form>
+          <form className="contact-form" onSubmit={sendEmail}>
             <FieldsContainer>
-              <input type="text" placeholder="Nome" />
-              <input type="text" placeholder="E-mail" />
+              <input type="text" placeholder="Nome" name="from_name" />
+              <input type="text" placeholder="E-mail" name="reply_to" />
             </FieldsContainer>
 
-            <textarea placeholder="Digite sua mensagem aqui" />
+            <textarea placeholder="Digite sua mensagem aqui" name="message" />
 
-            <button>ENVIAR</button>
+            <button type="submit" value="Send">
+              ENVIAR
+            </button>
           </form>
         </ContactContainer>
 
